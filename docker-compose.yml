@@ -1,17 +1,19 @@
 version: "3.5"
 
 services:
-  api:
-    container_name: api
+  api-web:
+    container_name: api-web
     image: node:16-alpine3.11
     build:
       context: .
-      target: api
+      target: api-web
     volumes:
       - "./src/:/var/www/src"
-      - "./node_modules/:/var/www/node_modules"
-  mysql:
-    container_name: mysql
+    ports:
+    - 4445:80
+
+  api-db:
+    container_name: api-db
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
@@ -20,7 +22,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-    - 3307:3306
+    - 3308:3306
 
 volumes:
   mysql-lib:

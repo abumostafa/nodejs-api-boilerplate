@@ -4,11 +4,11 @@ export const config = {
   port: process.env.APP_PORT || 4455,
   debug: process.env.APP_DEBUG === "1",
   database: {
-    user: process.env.DATABAE_USER || "root",
-    pass: process.env.DATABAE_PASS || "root",
-    name: process.env.DATABAE_NAME || "api",
-    host: process.env.DATABAE_HOST || "127.0.0.1",
-    port: Number(process.env.DATABAE_PORT || 3306),
+    user: process.env.DATABASE_USER || "root",
+    pass: process.env.DATABASE_PASS || "root",
+    name: process.env.DATABASE_NAME || "api",
+    host: process.env.DATABASE_HOST || "127.0.0.1",
+    port: Number(process.env.DATABASE_PORT || 3306),
     dialect: (process.env.DATABASE_DIALECT || "mysql") as Dialect
   },
 
