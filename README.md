@@ -12,7 +12,7 @@
 ### Setup
 
 ```bash
-docker-composer up -d
+docker-compose up -d
 ```
 
 ### Auth
