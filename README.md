@@ -1,6 +1,6 @@
 ### Nodejs Api boilerplate
 
-###Dependencies
+### Dependencies
 
 - express 
 - passport 
@@ -9,7 +9,7 @@
 - mysql2
 - sequelize
 
-###Setup
+### Setup
 
 ```bash
 docker-composer up -d
