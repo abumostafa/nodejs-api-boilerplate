@@ -10,19 +10,4 @@ services:
     volumes:
       - "./src/:/var/www/src"
     ports:
-    - 4445:80
-
-  api-db:
-    container_name: api-db
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    volumes:
-    - mysql-lib:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-    - 3308:3306
-
-volumes:
-  mysql-lib:
+      - 4445:80

@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "api-dev": "nodemon",
+    "migration:generate": "npx sequelize migration:generate --migrations-path src/migrations --config src/config/db.ts",
+    "db:migrate": "npx sequelize db:migrate --migrations-path build/migrations --config build/config/db.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +21,7 @@
     "eslint": "^8.1.0",
     "nodemon": "^2.0.14",
     "prettier": "^2.4.1",
+    "sequelize-cli": "^6.2.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },

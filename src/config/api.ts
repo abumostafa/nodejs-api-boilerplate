@@ -1,4 +1,7 @@
 import { Dialect } from "sequelize"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 export const config = {
   port: process.env.APP_PORT || 4455,

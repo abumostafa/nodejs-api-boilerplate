@@ -13,5 +13,6 @@ COPY src/ ./src
 
 # install project
 RUN npm install
+RUN npx tsc
 
 CMD ["npx", "nodemon"]
